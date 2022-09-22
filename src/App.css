@@ -1,0 +1,384 @@
+.App {
+  text-align: center;
+}
+
+/*
+----NAVBAR----
+*/
+
+.navbar {
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0 12%;
+  background-color: black;
+}
+.navbar-section {
+  width: 300px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.navbar-title {
+  font-size: x-large;
+  color: orange;
+  line-height: 3vh;
+  font-size: 1.2rem;
+}
+.navbar-sign {
+  padding-left: 0.3rem;
+  color: orange;
+  border-left: 3px solid red;
+  border-radius: 0.1rem;
+  align-self: center;
+  margin-left: 1rem;
+  cursor: pointer;
+  font-size: 1.2rem;
+  line-height: 3vh;
+  text-align: center;
+  font-weight: lighter;
+}
+@media only screen and (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: small;
+    height: 20vh;
+  }
+
+  .navbar-section {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+}
+
+.navbar-sign:hover {
+  color: rgb(248, 221, 170);
+}
+/*
+----LOGIN PAGE----
+*/
+.login {
+  width: 100vw;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("https://preview.redd.it/4fxxbm4opjd31.jpg?auto=webp&s=f5b7d62076600a978d290a5e87f13140c47f5cd0");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.login-form {
+  width: 50%;
+  height: 50%;
+  background-color: rgb(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+@media only screen and (max-width: 600px) {
+  .login-form {
+    width: 80%;
+  }
+}
+.login-input,
+.login-input:focus,
+.login-input:active {
+  width: 70%;
+  height: 2.5rem;
+  border: 3px solid rgb(255, 165, 0);
+  border-radius: 0.3rem;
+  padding: 0 1rem;
+  outline: none;
+}
+.login-button {
+  width: 7rem;
+  height: 2.5rem;
+  background-color: rgb(143, 28, 28, 0.9);
+  border: none;
+  border-radius: 0.2rem;
+  font-weight: 800;
+  color: white;
+  cursor: pointer;
+  letter-spacing: 0.1rem;
+}
+.login-button:hover {
+  background-color: rgb(143, 28, 28);
+}
+.login-button:active {
+  transition: transform 0.3s ease-in;
+  transform: scale(0.95);
+}
+/*
+----MAIN PAGE----
+*/
+
+/* SEARCH */
+.search {
+  height: 24rem;
+  background-image: url("https://preview.redd.it/4fxxbm4opjd31.jpg?auto=webp&s=f5b7d62076600a978d290a5e87f13140c47f5cd0");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.search-background {
+  background-color: rgb(0, 0, 0, 0.5);
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 24rem;
+  width: 100%;
+}
+.search-form {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.search-input {
+  width: 70%;
+  height: 2.5rem;
+  border-radius: 0.3rem;
+  padding: 0 1rem;
+  border: 2px solid rgb(255, 165, 0, 0.3);
+}
+@media only screen and (max-width: 600px) {
+  .search-input {
+    width: 80%;
+  }
+}
+.search-input:active {
+  outline: none;
+  border: 2px solid rgb(255, 165, 0);
+}
+.search-input:focus {
+  outline: none;
+  border: 2px solid rgb(255, 165, 0);
+}
+.select-div {
+  width: 65%;
+  display: flex;
+  justify-content: space-evenly;
+}
+@media only screen and (max-width: 600px) {
+  .search-selects {
+    flex-direction: columns;
+    width: 80%;
+  }
+  .select-div {
+    flex-direction: column;
+    width: 80%;
+    align-items: center;
+  }
+}
+.search-select {
+  width: 10rem;
+  height: 2.5rem;
+  border-radius: 0.3rem;
+  padding: 0 1rem;
+  border: 2px solid rgb(255, 165, 0.3);
+  background-color: rgb(255, 165, 0);
+  cursor: pointer;
+}
+.search-select:focus,
+.search-select:hover,
+.search-select::marker {
+  border: 2px solid rgb(255, 165, 0.3);
+  background-color: rgb(207, 205, 197);
+  color: rgb(143, 28, 28);
+}
+
+.search-button {
+  width: 10rem;
+  height: 2.5rem;
+  background-color: rgb(143, 28, 28, 0.8);
+  border: none;
+  border-radius: 0.2rem;
+  font-weight: 700;
+  color: white;
+  cursor: pointer;
+}
+.search-button:hover {
+  background-color: rgb(143, 28, 28);
+}
+.search-button:active {
+  transition: transform 0.3s ease-in;
+  transform: scale(0.95);
+}
+.clear-button {
+  width: 10rem;
+  height: 2.5rem;
+  background-color: rgb(0, 0, 130, 0.8);
+  border: none;
+  border-radius: 0.2rem;
+  font-weight: 700;
+  color: white;
+  cursor: pointer;
+}
+.clear-button:hover {
+  background-color: rgb(0, 0, 130);
+}
+.clear-button:active {
+  transition: transform 0.3s ease-in;
+  transform: scale(0.95);
+}
+
+/* MOVIE LIST */
+.movie-list {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* MOVIE LINE */
+.category-line {
+  width: 80vw;
+  margin: 0 auto;
+}
+.category-title {
+  text-align: left;
+  padding-left: 1rem;
+}
+.movie-line {
+  display: flex;
+  max-width: 100%;
+  overflow: auto;
+}
+.movie-line::-webkit-scrollbar {
+  width: 5px;
+}
+.movie-line::-webkit-scrollbar-track {
+  background-color: rgb(236, 177, 101, 0.3);
+  border-radius: 0.2rem;
+}
+.movie-line::-webkit-scrollbar-thumb {
+  background-color: rgb(143, 28, 28);
+  border-radius: 0.3rem;
+}
+
+/* MOVIE CARD */
+.movie-card {
+  min-width: 220px;
+  max-width: 220px;
+  height: 280px;
+  border-radius: 3px;
+  background-color: rgb(236, 177, 101, 0.3);
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  position: relative;
+  margin: 0.5rem 0.5rem 0.5rem 0;
+  cursor: pointer;
+  overflow: hidden;
+}
+.movie-card-image-container {
+  width: 100%;
+  height: 85%;
+  overflow: hidden;
+}
+.movie-card-image {
+  min-width: 100%;
+  min-height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  opacity: 0.8;
+}
+.movie-card-image:hover {
+  transition: transform 0.6s ease-out;
+  transform: scale(1.1);
+}
+.movie-card-title {
+  height: 3rem;
+  width: 100%;
+  line-height: 3rem;
+  font-size: 1rem;
+  font-weight: 700;
+}
+.movie-card-rating {
+  height: 2rem;
+  width: 2rem;
+  border-radius: 2rem;
+  line-height: 2rem;
+  background-color: rgb(133, 80, 11);
+  position: absolute;
+  top: 0.8rem;
+  right: 1rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: white;
+  padding: 3px;
+}
+
+/*
+----DETAIL PAGE----
+*/
+.detail-background {
+  background-image: url("https://wallpaperaccess.com/full/3658600.jpg");
+  height: 90vh;
+  position: fixed;
+  top: 10vh;
+  width: 100%;
+  overflow: hidden;
+}
+.detail {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  height: 60vh;
+  margin: 7rem auto;
+  text-align: left;
+  background-color: rgb(255, 165, 0, 0.9);
+  padding: 0 2rem;
+  border-radius: 1rem;
+}
+@media only screen and (max-width: 540px) {
+  .detail-background {
+    overflow: scroll;
+  }
+  .detail {
+    flex-direction: column;
+    height: auto;
+    margin-top: 3rem;
+    padding: 1rem;
+  }
+}
+@media only screen and (min-width: 1080px) {
+  .detail {
+    width: 70%;
+  }
+}
+.detail-image {
+  width: 300px;
+  height: 400px;
+}
+.detail-information {
+  width: 60vw;
+  height: 400px;
+  max-height: 400px;
+  flex-grow: 1;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  margin-left: 2rem;
+}
+.detail-title {
+  color: rgb(143, 28, 28);
+}
+.detail-content {
+  font-weight: 500;
+  letter-spacing: 0.05rem;
+  margin-top: -0.3rem;
+}

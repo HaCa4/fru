@@ -30,7 +30,7 @@ const StandardLines: React.FC = () => {
       data: comedyMovies,
     },
     {
-      name: "Kids Movies",
+      name: "Animation Movies",
       data: kidsMovies,
     },
   ];

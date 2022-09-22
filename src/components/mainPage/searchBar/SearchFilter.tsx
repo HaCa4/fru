@@ -1,9 +1,13 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useQuery } from "react-query";
 import axios, { TMDB } from "../../../utilities/api/axios";
 
 import { Context } from "../../../utilities/api/context";
-import { handleClear, handleFilter } from "../../../utilities/helper-functions/searchBarHelpers";
+import {
+  getGenres,
+  handleClear,
+  handleFilter,
+} from "../../../utilities/helper-functions/searchBarHelpers";
 import { Genre } from "../../../utilities/types/types";
 
 const SearchFilter: React.FC = () => {
@@ -25,14 +29,9 @@ const SearchFilter: React.FC = () => {
     yearsArray.push(i);
   }
 
-  useQuery(
-    ["Genres"],
-    () => {
-      axios.get(`/genre/movie/list?${TMDB}`).then((res) => setGenres(res.data.genres));
-    },
-    { staleTime: 30000, refetchIntervalInBackground: true }
-  );
-
+  useEffect(() => {
+    getGenres(setGenres);
+  }, []);
   return (
     <>
       <div className="search-form">

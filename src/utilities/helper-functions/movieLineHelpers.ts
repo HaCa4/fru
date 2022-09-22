@@ -9,9 +9,7 @@ export const getPopularMovies = (setPopularMovies: any) => {
 
 export const getRatedMovies = (setRatedMovies: any) => {
   axios
-    .get(
-      `/discover/movie/?certification_country=US&certification=R&sort_by=vote_average.desc&${TMDB}`
-    )
+    .get(`/discover/movie/?certification_country=US&sort_by=vote_average.desc&${TMDB}`)
     .then((res) => {
       setRatedMovies(res.data.results.slice(0, 10));
     });

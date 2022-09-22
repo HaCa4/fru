@@ -1,3 +1,6 @@
+import axios, { TMDB } from "../api/axios";
+import { Genre } from "../types/types";
+
 export const handleSearch = (
   event: React.ChangeEvent<HTMLInputElement>,
   setSearchValue: React.Dispatch<React.SetStateAction<string>>,
@@ -35,4 +38,7 @@ export const handleClear = (
   setSearchValue("");
   setCategory("none");
   setYear("none");
+};
+export const getGenres = (setGenres: React.Dispatch<React.SetStateAction<Genre[] | undefined>>) => {
+  axios.get(`/genre/movie/list?${TMDB}&language=en-US`).then((res) => setGenres(res.data.genres));
 };

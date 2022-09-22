@@ -7,9 +7,9 @@ export const getPopularMovies = (setPopularMovies: any) => {
   });
 };
 
-export const getRatedMovies = (setRatedMovies: any) => {
+export const getKidsMovies = (setRatedMovies: any) => {
   axios
-    .get(`/discover/movie/?certification_country=US&sort_by=vote_average.desc&${TMDB}`)
+    .get(`/discover/movie?with_genres=16&sort_by=popularity.desc&${TMDB}&include_adult=false`)
     .then((res) => {
       setRatedMovies(res.data.results.slice(0, 10));
     });

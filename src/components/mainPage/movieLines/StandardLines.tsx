@@ -6,13 +6,13 @@ import {
   getComedyMovies,
   getDramaMovies,
   getPopularMovies,
-  getRatedMovies,
+  getKidsMovies,
 } from "../../../utilities/helper-functions/movieLineHelpers";
 import { Category, Movie } from "../../../utilities/types/types";
 
 const StandardLines: React.FC = () => {
   const [popularMovies, setPopularMovies] = useState<Movie[]>();
-  const [ratedMovies, setRatedMovies] = useState<Movie[]>();
+  const [kidsMovies, setKidsMovies] = useState<Movie[]>();
   const [dramaMovies, setDramaMovies] = useState<Movie[]>();
   const [comedyMovies, setComedyMovies] = useState<Movie[]>();
 
@@ -22,10 +22,6 @@ const StandardLines: React.FC = () => {
       data: popularMovies,
     },
     {
-      name: "Highest Rated Movies",
-      data: ratedMovies,
-    },
-    {
       name: "Drama Movies",
       data: dramaMovies,
     },
@@ -33,11 +29,15 @@ const StandardLines: React.FC = () => {
       name: "Comedy Movies",
       data: comedyMovies,
     },
+    {
+      name: "Kids Movies",
+      data: kidsMovies,
+    },
   ];
 
   useEffect(() => {
     getPopularMovies(setPopularMovies);
-    getRatedMovies(setRatedMovies);
+    getKidsMovies(setKidsMovies);
     getDramaMovies(setDramaMovies);
     getComedyMovies(setComedyMovies);
   }, []);
